@@ -1,4 +1,5 @@
 ---
+import "../style/global.css"
 const pageTitle = "About Me";
 
 const identity = {
@@ -34,6 +35,10 @@ switch (done) {
         message = "You suck at everything man"
         break;
 }
+
+const skillColor = "darkorange";
+const fontWeight = 700;
+const textCase = "uppercase";
 ---
 
 <!DOCTYPE html>
@@ -63,7 +68,7 @@ switch (done) {
 
         <p>My Skills are:</p>
         <ul>
-            {skills.map((skill) => <li>{skill}</li>)}
+            {skills.map((skill) => <li class="skill">{skill}</li>)}
         </ul>
 
         {happy && <p>I'm a one happy mother effer!</p>}
@@ -73,3 +78,15 @@ switch (done) {
     </section>
 </body>
 </html>
+
+<style define:vars={{skillColor, fontWeight, textCase}}>
+    h1 {
+        color: blueviolet;
+    }
+
+    .skill {
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+    }
+</style>
