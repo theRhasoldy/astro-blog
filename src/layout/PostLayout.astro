@@ -1,0 +1,13 @@
+---
+import "../style/global.css"
+import BaseLayout from "./BaseLayout.astro"
+
+const { frontmatter } = Astro.props
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+    <cite>Written by {frontmatter.author}</cite><br>
+    <cite>Published on {frontmatter.pubDate.split("T")[0]}</cite>
+    <hr>
+    <slot />
+</BaseLayout>
