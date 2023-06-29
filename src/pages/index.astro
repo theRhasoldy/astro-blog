@@ -1,28 +1,7 @@
 ---
-import "../style/global.css"
-import Navigation from "../components/Navigation.astro"
-import Footer from "../components/Footer.astro"
-const pageTitle = "Hello World"
+import BaseLayout from "../layout/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<Navigation />
-		<h1>Hello World!</h1>
-		<h2>This is My Astro Website</h2>
-	</body>
-	<Footer />
-</html>
-
-<style>
-	h1 {
-		color: red;
-	}
-</style>
+<BaseLayout pageTitle="Hello World!">
+	<h2>Hello Motherfucking World</h2>
+</BaseLayout>

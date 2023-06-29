@@ -1,29 +1,16 @@
 ---
-import Footer from "../components/Footer.astro";
-import Navigation from "../components/Navigation.astro";
 import "../style/global.css"
-const pageTitle = "My Blogposts"
+import BaseLayout from "../layout/BaseLayout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{pageTitle}</title>
-</head>
-    <body>
-        <Navigation />
-        <section>
-            <h1>These are my blogposts</h1>
-            <p>This is where I will document my journey learning Astro</p>
-            <br>
-            <ul>
-                <li><a href="/posts/post-1">Post 1</a></li>
-                <li><a href="/posts/post-2">Post 2</a></li>
-                <li><a href="/posts/post-3">Post 3</a></li>
-            </ul>
-        </section>
-        <Footer />
-    </body>
-</html>
+<BaseLayout pageTitle="My Blog">
+    <section>
+        <h2>These are my blogposts</h1>
+        <p>This is where I will document my journey learning Astro</p>
+        <ul>
+            <li><a href="/posts/post-1">Post 1</a></li>
+            <li><a href="/posts/post-2">Post 2</a></li>
+            <li><a href="/posts/post-3">Post 3</a></li>
+        </ul>
+    </section>
+</BaseLayout>
