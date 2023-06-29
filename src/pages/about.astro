@@ -1,4 +1,6 @@
 ---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 import "../style/global.css"
 const pageTitle = "About Me";
 
@@ -48,35 +50,32 @@ const textCase = "uppercase";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{pageTitle}</title>
 </head>
-<body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/blog">Blog</a>
-    </nav>
-    <section>
-        <h1>This is an about me page</h1>
-        <h2>Who Am I</h2>
-        <p>My name is {identity.firstName} {identity.lastName}, I'm a 22 year old aspiring software developer and {identity.occupation} with a passion of building creative and inspiring websites</p>
-        <p>I'm currently learning Astro to build static websites!</p>
-        <p>I'm Based in {identity.country}</p>
-        <hr>
-        <p>My hobbies are:</p>
-        <ul>
-            {identity.hobbies.map((hobby) => <li>{ hobby }</li>)}
-        </ul>
+    <body>
+        <Navigation />
+        <section>
+            <h1>This is an about me page</h1>
+            <h2>Who Am I</h2>
+            <p>My name is {identity.firstName} {identity.lastName}, I'm a 22 year old aspiring software developer and {identity.occupation} with a passion of building creative and inspiring websites</p>
+            <p>I'm currently learning Astro to build static websites!</p>
+            <p>I'm Based in {identity.country}</p>
+            <hr>
+            <p>My hobbies are:</p>
+            <ul>
+                {identity.hobbies.map((hobby) => <li>{ hobby }</li>)}
+            </ul>
 
-        <p>My Skills are:</p>
-        <ul>
-            {skills.map((skill) => <li class="skill">{skill}</li>)}
-        </ul>
+            <p>My Skills are:</p>
+            <ul>
+                {skills.map((skill) => <li class="skill">{skill}</li>)}
+            </ul>
 
-        {happy && <p>I'm a one happy mother effer!</p>}
-        {finished && <p>I've finished this tutorial</p>}
-        {goal === 3 ? <p>Noice!</p> : <p>You suck ass mate!</p>}
-        <p>{message}</p>
-    </section>
-</body>
+            {happy && <p>I'm a one happy mother effer!</p>}
+            {finished && <p>I've finished this tutorial</p>}
+            {goal === 3 ? <p>Noice!</p> : <p>You suck ass mate!</p>}
+            <p>{message}</p>
+        </section>
+        <Footer/>
+    </body>
 </html>
 
 <style define:vars={{skillColor, fontWeight, textCase}}>

@@ -1,4 +1,6 @@
 ---
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
 import "../style/global.css"
 const pageTitle = "My Blogposts"
 ---
@@ -10,21 +12,18 @@ const pageTitle = "My Blogposts"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{pageTitle}</title>
 </head>
-<body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/blog">Blog</a>
-    </nav>
-    <section>
-        <h1>These are my blogposts</h1>
-        <p>This is where I will document my journey learning Astro</p>
-        <br>
-        <ul>
-            <li><a href="/posts/post-1">Post 1</a></li>
-            <li><a href="/posts/post-2">Post 2</a></li>
-            <li><a href="/posts/post-3">Post 3</a></li>
-        </ul>
-    </section>
-</body>
+    <body>
+        <Navigation />
+        <section>
+            <h1>These are my blogposts</h1>
+            <p>This is where I will document my journey learning Astro</p>
+            <br>
+            <ul>
+                <li><a href="/posts/post-1">Post 1</a></li>
+                <li><a href="/posts/post-2">Post 2</a></li>
+                <li><a href="/posts/post-3">Post 3</a></li>
+            </ul>
+        </section>
+        <Footer />
+    </body>
 </html>
